@@ -1,29 +1,119 @@
 //GetElement for all the hours
-let hour9 = document.getElementById("hour-9")
-let hour10 = document.getElementById("hour-10")
-let hour11 = document.getElementById("hour-11")
-let hour12 = document.getElementById("hour-12")
-let hour13 = document.getElementById("hour-13")
-let hour14 = document.getElementById("hour-14")
-let hour15 = document.getElementById("hour-15")
-let hour16 = document.getElementById("hour-16")
-let hour17 = document.getElementById("hour-17")
+
+let hour9 = document.getElementById("hour-9");
+let hour10 = document.getElementById("hour-10");
+let hour11 = document.getElementById("hour-11");
+let hour12 = document.getElementById("hour-12");
+let hour13 = document.getElementById("hour-13");
+let hour14 = document.getElementById("hour-14");
+let hour15 = document.getElementById("hour-15");
+let hour16 = document.getElementById("hour-16");
+let hour17 = document.getElementById("hour-17");
+
+//GetElements for the Save Button
+
+let hour9Btn = document.getElementById("hour9Btn");
+let hour10Btn = document.getElementById("hour10Btn");
+let hour11Btn = document.getElementById("hour11Btn");
+let hour12Btn = document.getElementById("hour12Btn");
+let hour13Btn = document.getElementById("hour13Btn");
+let hour14Btn = document.getElementById("hour14Btn");
+let hour15Btn = document.getElementById("hour15Btn");
+let hour16Btn = document.getElementById("hour16Btn");
+let hour17Btn = document.getElementById("hour17Btn");
+
 //addEventListener Area
 
-
+hour9Btn.addEventListener('click', hour9Save)
+hour10Btn.addEventListener('click', hour10Save)
+hour11Btn.addEventListener('click', hour11Save)
+hour12Btn.addEventListener('click', hour12Save)
+hour13Btn.addEventListener('click', hour13Save)
+hour14Btn.addEventListener('click', hour14Save)
+hour15Btn.addEventListener('click', hour15Save)
+hour16Btn.addEventListener('click', hour16Save)
+hour17Btn.addEventListener('click', hour17Save)
 
 //LocalStorage Area
 
+hour9Stored = localStorage.getItem("hour9LocalStorage");
+hour9Btn.previousElementSibling.innerHTML = hour9Stored;
 
+hour10Stored = localStorage.getItem("hour10LocalStorage");
+hour10Btn.previousElementSibling.innerHTML = hour10Stored;
+
+hour11Stored = localStorage.getItem("hour11LocalStorage");
+hour11Btn.previousElementSibling.innerHTML = hour11Stored;
+
+hour12Stored = localStorage.getItem("hour12LocalStorage");
+hour12Btn.previousElementSibling.innerHTML = hour12Stored;
+
+hour13Stored = localStorage.getItem("hour13LocalStorage");
+hour13Btn.previousElementSibling.innerHTML = hour13Stored;
+
+hour14Stored = localStorage.getItem("hour14LocalStorage");
+hour14Btn.previousElementSibling.innerHTML = hour14Stored;
+
+hour15Stored = localStorage.getItem("hour15LocalStorage");
+hour15Btn.previousElementSibling.innerHTML = hour15Stored;
+
+hour16Stored = localStorage.getItem("hour16LocalStorage");
+hour16Btn.previousElementSibling.innerHTML = hour16Stored;
+
+hour17Stored = localStorage.getItem("hour17LocalStorage");
+hour17Btn.previousElementSibling.innerHTML = hour17Stored;
 
 //Date using DayJs
 let currentDay = document.getElementById('currentDay');
 setInterval(function (){currentDay.innerHTML = dayjs().format('dddd[,] MMMM d')}, 1000);
 
 
-//test Area
-
-
+//Save Function Area
+function hour9Save(){
+  const text = this.previousElementSibling.value;
+  console.log(text);
+  localStorage.setItem("hour9LocalStorage", text)
+}
+function hour10Save(){
+  const text = this.previousElementSibling.value;
+  console.log(text);
+  localStorage.setItem("hour10LocalStorage", text)
+}
+function hour11Save(){
+  const text = this.previousElementSibling.value;
+  console.log(text);
+  localStorage.setItem("hour11LocalStorage", text)
+}
+function hour12Save(){
+  const text = this.previousElementSibling.value;
+  console.log(text);
+  localStorage.setItem("hour12LocalStorage", text)
+}
+function hour13Save(){
+  const text = this.previousElementSibling.value;
+  console.log(text);
+  localStorage.setItem("hour13LocalStorage", text)
+}
+function hour14Save(){
+  const text = this.previousElementSibling.value;
+  console.log(text);
+  localStorage.setItem("hour14LocalStorage", text)
+}
+function hour15Save(){
+  const text = this.previousElementSibling.value;
+  console.log(text);
+  localStorage.setItem("hour15LocalStorage", text)
+}
+function hour16Save(){
+  const text = this.previousElementSibling.value;
+  console.log(text);
+  localStorage.setItem("hour16LocalStorage", text)
+}
+function hour17Save(){
+  const text = this.previousElementSibling.value;
+  console.log(text);
+  localStorage.setItem("hour17LocalStorage", text)
+}
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
